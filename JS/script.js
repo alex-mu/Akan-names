@@ -23,5 +23,9 @@ else if(gender === "Female") {
 }
 
 function validateForm() {
-    let x = document.forms["myForm"]
+    let date = document.forms["Form"][date].value;
+    if(date == ""){
+        alert("Date must be filled out");
+        return false
+    }
 }
