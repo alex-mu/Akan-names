@@ -1,0 +1,23 @@
+var date = document.getElementById('date').Value;
+var month = document.getElementById('month').value;
+var yearOfBirth = document.getElementById('year').value;
+
+var century = yearOfBirth.slice(0,2);
+var year = yearOfBirth.slice(2,4);
+
+var genders = document.getElementById("gender");
+var gender = genders.options[genders.selectedIndex].text;
+
+var maleName = ["kwasi","kwadwo","kwabena","kwaku","yaw","kofi","kwame"];
+var femaleName = ["Akosu","Adwoa","Abenaa","Akua","Yaa","Afua","Amna"];
+var dayOfWeek = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+var dayOfBirth = ( ( (century/4) -2*year-1) + ((5*year/4) ) + ((26*(month+1)/10)) + date ) % 7;
+var dayOfBirth = Math.floor(dayOfBirth);
+
+if(gender === "Male") {
+    document.getElementById("result").innerHTML = "You were born on" + dayOfWeek[dayOfBirth - 1] + "and your name is" + maleName[dayOfBirth - 1];
+}
+else if(gender === "Female") {
+    document.getElementById("result").innerHTML = "You were born on" + dayOfWeek[dayOfBirth - 1] + "and your name is" + femaleName[dayOfBirth - 1];
+}
