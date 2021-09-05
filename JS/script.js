@@ -21,3 +21,7 @@ if(gender === "Male") {
 else if(gender === "Female") {
     document.getElementById("result").innerHTML = "You were born on" + dayOfWeek[dayOfBirth - 1] + "and your name is" + femaleName[dayOfBirth - 1];
 }
+
+function validateForm() {
+    let x = document.forms["myForm"]
+}
