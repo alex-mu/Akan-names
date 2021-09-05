@@ -15,9 +15,18 @@
         </div>
         <form id="form" method="POST">
             <fieldset>
-                <legend>Input your Dob to start:</legend>
-                
+                <legend>Input your DOB to start:</legend>
+                Date:<input type="number"  id="date">
+                Month:<input type="number" id="month">
+                Year:<input type="number" id="year">
+                <select id="gender">
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                </select>
             </fieldset>
+            <br>
+            <input type="submit" value="Submit" id="submitButton" class="btn btn-primary" onclick="generateName(); return false"/>
+            <h2 class="text-center" id="result">Results</h2>
         </form>
     </div>
     
